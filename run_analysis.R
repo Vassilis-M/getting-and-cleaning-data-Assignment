@@ -96,8 +96,8 @@ setWithActivityNames <- merge(setForMeanAndStd, activityLabels,
 
 #5.1 Making a second tidy data set
 
-TidyDataSet <- aggregate(. ~subjectId + activityId, setWithActivityNames, mean)
-TidyDataSet <- TidyDataSet[order(TidyDataSet$subjectId, TidyDataSet$activityId),]
+SecDataSet <- aggregate(. ~subjectId + activityId, setWithActivityNames, mean)
+SecDataSet <- SecDataSet[order(SecDataSet$subjectId, SecDataSet$activityId),]
 
 #5.2 Writing second tidy data set in txt file
 
